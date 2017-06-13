@@ -109,19 +109,19 @@ bool readData(){
   
   if(digitalRead(nextLine) == LOW) { 
     line++; 
-    delay(200); 
+    delay(500); 
   }
   if(digitalRead(laserSwitch) == LOW) {
-    if(!laserStatus) digitalWrite(laserPin, HIGH);
+    if(!laserStatus) (digitalWrite(laserPin, HIGH);
     else digitalWrite laserPin, LOW);
     laserStatus = !laserStatus;
-    delay(200);
+    delay(500);
   }
   if(digitalRead(nextSlide) == LOW) {
     Serial.print("#S|SENDK|[");
     Serial.print(pid);
     Serial.println("& {RIGHT} ]#");
-    delay(200);
+    delay(500);
   }
   if(line >= lineMax) line = 2;
     
